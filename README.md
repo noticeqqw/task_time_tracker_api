@@ -36,7 +36,6 @@ Telegram: [https://t.me/JavaProDeveloper]
 | `POST` | `/api/auth/register` | `username`, `email`, `password`, `confirmPassword` | `201 Created` |
 | `POST` | `/api/auth/login` | `username`, `password` | `200 OK` + `{ "token": "..." }` |
 
-
 ---
 
 ### Задачи (`/api/tasks`)
@@ -109,7 +108,7 @@ Telegram: [https://t.me/JavaProDeveloper]
 
 ### Валидация входных DTO (Bean Validation)
 
-Все входящие запросы валидируются через Jakarta Bean Validation (`@Valid`). При ошибке возвращается `400 Bad Request` с перечислением нарушений.
+Все входящие запросы валидируются через Bean Validation. При ошибке возвращается `400 Bad Request` с перечислением нарушений.
 
 | DTO | Поле | Правило |
 |-----|------|---------|
@@ -165,6 +164,10 @@ docker compose up --build
 ```
 http://localhost:8080/swagger-ui.html
 ```
+
+### Проверка через Swagger UI
+
+Регистрация - Вход и получение токена - Авторизация в Swagger -Создание задачи - Изменение статуса задачи - Создание записи о времени -Получение записей за период
 
 ---
 
